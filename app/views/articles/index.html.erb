@@ -3,5 +3,5 @@
 <%= link_to 'Новая статья', new_article_path %>
 
 <% @articles.each do |article| %>
-  <h2><%= article.title %></h2>
+  <h2><%= link_to article.title, article_path(article) %></h2>
 <% end %>
