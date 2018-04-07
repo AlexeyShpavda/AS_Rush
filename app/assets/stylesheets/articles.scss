@@ -6,4 +6,22 @@ h1 {
   font-family: Arial, sans-serif;
   font-size: 75px;
   text-transform: uppercase;
+  display: inline;
+}
+.btn-outline-primary{
+  margin: 10px;
+  float: right;
+  padding: 1em;
+  font-size: 20px;
+}
+article.post{
+  padding: 1em 0;
+  border-bottom: 1px solid #187BFE;
+}
+article section h2{
+  margin: 0;
+  padding: 0;
+}
+article section.post-summary, article section.post-body{
+  margin-top: 1em;
 }

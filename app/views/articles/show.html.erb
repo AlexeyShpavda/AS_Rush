@@ -1,6 +1,15 @@
-<h1><%= @article.title %></h1>
-
-<p><%= @article.body %></p>
-
-<%= link_to 'Edit', edit_article_path(@article) %>
-<%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?' } %>
+<article class="post">
+  <section class="post-head">
+    <h2><%= @article.title %></h2>
+    <small>
+      <time><%= @article.created_at.to_date.strftime("%d %B, %Y") %></time>
+      |
+      <%= link_to 'Edit', edit_article_path(@article) %>
+      |
+      <%= link_to 'Delete', article_path(@article), method: :delete, data: { confirm: 'Are you sure?'} %>
+    </small>
+  </section>
+  <section class="post-body">
+    <%= @article.body %>
+  </section>
+</article>
