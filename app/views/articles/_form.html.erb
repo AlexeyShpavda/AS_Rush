@@ -1,20 +1,21 @@
 <%= form_for @article do |f| %>
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :summary %>
-    <%= f.text_area :summary %>
+    <%= f.text_area :summary, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
+  <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_area :body %>
+    <%= f.text_area :body, class: 'form-control' %>
   </div>
 
-  <div class="form-control">
-    <%= f.submit 'Save' %>
+  <div class="form-group">
+    <%= f.submit 'Save', class: 'btn btn-primary' %>
+    <%= link_to 'Back', :back, class: 'btn btn-secondary' %>
   </div>
 <% end %>
