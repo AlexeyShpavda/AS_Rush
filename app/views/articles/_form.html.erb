@@ -1,3 +1,14 @@
+<% if @article.errors.any? %>
+  <div class="alert alert-danger">
+    <h5><%= t('common.errors') %></h5>
+    <ul>
+      <% @article.errors.full_messages.each do |message|%>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_for @article do |f| %>
   <div class="form-group">
     <%= f.label :title %>
