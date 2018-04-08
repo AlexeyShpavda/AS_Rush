@@ -15,3 +15,9 @@ body{
 .nav-item{
   margin-right: 3em;
 }
+.field_with_errors label{
+  color : #d01612
+}
+.field_with_errors input, .field_with_errors textarea{
+  border-color : #d01612
+}
