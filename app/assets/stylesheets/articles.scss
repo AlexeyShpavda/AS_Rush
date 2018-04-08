@@ -2,26 +2,65 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.cursor_default{
+  cursor: default;
+}
 h1 {
   font-family: Arial, sans-serif;
   font-size: 75px;
   text-transform: uppercase;
   display: inline;
+  cursor: default;
+  color: black;
 }
-.btn-outline-primary{
+.btn-outline-dark{
+  color: black;
   margin: 10px;
   float: right;
   padding: 1em;
   font-size: 20px;
 }
-article.post{
-  padding: 1em 0;
-  border-bottom: 1px solid #187BFE;
+.btn-outline-dark:hover{
+  background-color: black;
+  color: white;
 }
-article section h2{
-  margin: 0;
-  padding: 0;
+article.post_index{
+  padding: 1em 0;
+  border-bottom: 1px solid black;
 }
 article section.post-summary, article section.post-body{
   margin-top: 1em;
+}
+article.post h2{
+  font-family: Arial black, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+.small_links, time{
+  color: #2E2F30;
+}
+.delete_link:hover{
+  color: red;
+  text-decoration: none;
+}
+.edit_link:hover{
+  color: lime;
+  text-decoration: none;
+}
+.title_link{
+  list-style: none;
+  text-decoration: none;
+  position: relative;
+  font-size: 30px;
+  color: black;
+  font-family: Arial black, sans-serif;
+  transition: 0.2s all;
+}
+.title_link:hover{
+  color: gray;
+  text-decoration: none;
+  right: 0;
+}
+small{
+  cursor: default;
 }
