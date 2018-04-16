@@ -23,7 +23,15 @@ $ ->
       progress = event.loaded / event.total * 100
       attachment.setUploadProgress progress
 
+    xhr.onload = ->
+      response = JSON.parse(@responseTest)
+      attachment.setAttributes
+        url: response.url
+        picture_id: response.picture_id
+        href: response.url
+
     xhr.send form
+
 
   deleteFile = (n) ->
     $.ajax
