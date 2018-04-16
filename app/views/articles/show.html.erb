@@ -12,6 +12,6 @@
   </section>
   <section class="post-body cursor_default">
     <%= image_tag @article.pictureforarticle.url(:large), class: 'image-show' if @article.pictureforarticle? %>
-    <%= @article.body %>
+    <%= @article.body.html_safe %>
   </section>
 </article>
