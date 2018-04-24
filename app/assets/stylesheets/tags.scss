@@ -13,6 +13,14 @@
 .tag5{
   font-size: 1.8em;
 }
+.tag1,.tag2,.tag3,.tag4,.tag5{
+  display: inline;
+  color: black;
+}
+.tag1:hover,.tag2:hover,.tag3:hover,.tag4:hover,.tag5:hover{
+  color: red;
+  text-decoration: none;
+}
 h1 {
   font-family: Arial, sans-serif;
   font-size: 75px;
