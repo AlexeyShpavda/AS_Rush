@@ -7,6 +7,7 @@
 <div class="row">
   <div class = "col-md-10">
     <%= render @articles %>
+    <%= will_paginate @articles, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
   </div>
   <div class="col-md-2">
     <h2>Tags</h2>
