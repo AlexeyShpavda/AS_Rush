@@ -33,7 +33,7 @@ class CategoriesController < ApplicationController
       render :edit
     end
   end
-  
+
   def destroy
     @category.destroy
     redirect_to @categories_path, success: 'Category deleted successfully'
