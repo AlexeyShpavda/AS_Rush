@@ -1,0 +1,30 @@
+<div class="header_categories">
+  <h1>Categories</h1>
+
+  <%= link_to 'New category', new_category_path, class: 'btn btn-outline-dark' %>
+</div>
+
+<section id="categories">
+  <table class="table">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+      <% @categories.each_with_index do |category, index| %>
+        <tr>
+          <td><%= index +1 %></td>
+          <td><%= category.name %></td>
+          <td>
+            <%= link_to 'Edit', edit_category_path(category), class: 'btn btn-outline-primary btn-sm' %>
+            <%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: 'Are you sure?'},
+                        class: 'btn btn-outline-danger btn-sm' %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</section>
