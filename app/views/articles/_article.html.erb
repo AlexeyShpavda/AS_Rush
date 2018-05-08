@@ -3,6 +3,10 @@
     <h2><%= link_to article.title, article_path(article), class: 'title_link' %></h2>
     <small>
       <time><%= article.created_at.to_date.strftime("%d %B, %Y") %></time>
+      <% if article.category.present? %>
+        |
+        <%= link_to article.category.name, article.category, class: 'small_links category_link' %>
+      <% end %>
       |
       <%= link_to 'Edit', edit_article_path(article), class: 'small_links edit_link' %>
       |
