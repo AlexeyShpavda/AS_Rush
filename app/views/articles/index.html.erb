@@ -10,9 +10,13 @@
     <%= will_paginate @articles, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
   </div>
   <div class="col-md-2">
-    <h2>Tags</h2>
-    <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
-      <div><%= link_to tag.name, tag_path(tag.name), class: css_class %></div>
-    <% end %>
+    <%= render 'shared/submenu' %>
+
+    <div class="tag_cloud">
+      <h2>Tags</h2>
+      <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
+        <div><%= link_to tag.name, tag_path(tag.name), class: css_class %></div>
+      <% end %>
+    </div>
   </div>
 </div>
