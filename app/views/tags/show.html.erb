@@ -1,16 +1,13 @@
-<h1><%= @tag.name %></h1>
-
 <% if @tag.articles.empty? %>
   <h2>No articles</h2>
 <% else %>
   <div class="row">
     <div class="col-md-10">
+      <h1><%= @tag.name %></h1>
       <%= render @tag.articles %>
     </div>
     <div class="col-md-2">
-      <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
-       <div class="badge badge-dark"><%= link_to tag.name, tag_path(tag.name), class: css_class %></div>
-      <% end %>
+      <%= render 'shared/submenu' %>
     </div>
   </div>
 <% end %>

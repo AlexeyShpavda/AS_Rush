@@ -1,0 +1,13 @@
+<div class="row">
+  <div class = "col-md-10">
+    <h1><%= @category.name %></h1>
+    <section id="posts">
+      <%= render @articles %>
+    </section>
+  </div>
+  <div class="col-md-2">
+    <%= render 'shared/submenu' %>
+  </div>
+</div>
+
+<%= will_paginate @articles, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
