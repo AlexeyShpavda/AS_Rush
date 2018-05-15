@@ -1,7 +1,7 @@
 class Article < ApplicationRecord
   mount_uploader :pictureforarticle, PictureForArticleUploader
 
-  has_many :taggings
+  has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   belongs_to :category
 
