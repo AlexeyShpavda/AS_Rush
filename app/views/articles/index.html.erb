@@ -1,15 +1,17 @@
-<div class="header_articles">
-  <h1>Articles</h1>
+<div class="container">
+  <div class="header_articles">
+    <h1>Articles</h1>
 
-  <%= link_to 'New article', new_article_path, class: 'btn btn-outline-dark' %>
-</div>
-
-<div class="row">
-  <div class = "col-md-10">
-    <%= render @articles %>
-    <%= will_paginate @articles, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
+    <%= link_to 'New article', new_article_path, class: 'btn btn-outline-dark' %>
   </div>
-  <div class="col-md-2">
-    <%= render 'shared/submenu' %>
+
+  <div class="row">
+    <div class="col-md-10">
+      <%= render @articles %>
+      <%= will_paginate @articles, renderer: 'BootstrapPaginationHelper::LinkRenderer' %>
+    </div>
+    <div class="col-md-2">
+      <%= render 'shared/submenu' %>
+    </div>
   </div>
 </div>

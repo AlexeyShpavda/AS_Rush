@@ -1,5 +1,5 @@
 <div class="submenu">
-  <h2>Categories</h2>
+  <h3>Categories</h3>
   <ul class="nav nav-pills nav-stacked">
     <% Category.roots.each do |category| %>
     <li class="nav-item">
@@ -10,7 +10,7 @@
     <% end %>
   </ul>
   <div class="tag_cloud">
-    <h2>Tags</h2>
+    <h3>Tags</h3>
     <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
       <div><%= link_to tag.name, tag_path(tag.name), class: css_class %></div>
     <% end %>

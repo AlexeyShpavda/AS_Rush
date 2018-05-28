@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :tags, only: [:show]
   resources :categories
 
-  root 'welcome#index'
+  root 'articles#index'
 end
